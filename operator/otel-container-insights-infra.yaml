@@ -8,7 +8,7 @@ kind: OpenTelemetryCollector
 metadata:
   name: my-collector-cloudwatch
 spec:
-  mode: DaemonSet
+  mode: daemonset
   serviceAccount: adot-collector
   podAnnotations:
     prometheus.io/scrape: 'true'
