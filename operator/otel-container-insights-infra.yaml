@@ -13,6 +13,24 @@ spec:
   podAnnotations:
     prometheus.io/scrape: 'true'
     prometheus.io/port: '8888'
+  volumeMounts:
+    - name: rootfs
+      mountPath: /rootfs
+      readOnly: true
+    - name: dockersock
+      mountPath: /var/run/docker.sock
+      readOnly: true
+    - name: containerdsock
+      mountPath: /run/containerd/containerd.sock
+    - name: varlibdocker
+      mountPath: /var/lib/docker
+      readOnly: true
+    - name: sys
+      mountPath: /sys
+      readOnly: true
+    - name: devdisk
+      mountPath: /dev/disk
+      readOnly: true
   config: |
     receivers:
       awscontainerinsightreceiver:
@@ -99,7 +117,7 @@ spec:
           receivers: [awscontainerinsightreceiver]
           processors: [batch/metrics]
           exporters: [awsemf]
-          
+        
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
