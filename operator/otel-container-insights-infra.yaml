@@ -13,13 +13,7 @@ spec:
   podAnnotations:
     prometheus.io/scrape: 'true'
     prometheus.io/port: '8888'
-  env:
-    - name: CLUSTER_NAME
-      value: <YOUR_EKS_CLUSTER_NAME>
   config: |
-      #
-      # Scrape configuration for Container Insights
-      # 
     receivers:
       awscontainerinsightreceiver:
       
