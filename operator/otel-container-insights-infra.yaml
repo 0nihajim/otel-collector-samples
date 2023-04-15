@@ -34,22 +34,22 @@ spec:
   volumes:
     - name: rootfs
       hostPath:
-      path: /
+        path: /
     - name: dockersock
       hostPath:
-      path: /var/run/docker.sock
+        path: /var/run/docker.sock
     - name: varlibdocker
       hostPath:
-      path: /var/lib/docker
+        path: /var/lib/docker
     - name: containerdsock
       hostPath:
-      path: /run/containerd/containerd.sock
+        path: /run/containerd/containerd.sock
     - name: sys
       hostPath:
-      path: /sys
+        path: /sys
     - name: devdisk
       hostPath:
-      path: /dev/disk/
+        path: /dev/disk/
   config: |
     receivers:
       awscontainerinsightreceiver:
