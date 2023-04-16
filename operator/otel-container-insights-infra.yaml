@@ -123,10 +123,6 @@ spec:
           - dimensions: [[PodName, Namespace, ClusterName]]
             metric_name_selectors:
               - pod_number_of_container_restarts
-          
-          # container metrics
-          - dimensions: [[ContainerName, PodName, Namespace, ClusterName]]
-            metric_name_selectors:
               - container_cpu_utilization
           
           # cluster metrics
