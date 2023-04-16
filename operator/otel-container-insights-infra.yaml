@@ -128,7 +128,6 @@ spec:
           - dimensions: [[ContainerName, PodName, Namespace, ClusterName]]
             metric_name_selectors:
               - container_cpu_utilization
-              - container_filesystem_usage
           
           # cluster metrics
           - dimensions: [[ClusterName]]
