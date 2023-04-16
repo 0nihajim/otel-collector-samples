@@ -125,7 +125,7 @@ spec:
               - pod_number_of_container_restarts
           
           # container metrics
-          - dimensions: [[ContainerName, PodName, Namespace, ClusterName]
+          - dimensions: [[ContainerName, PodName, Namespace, ClusterName]]
             metric_name_selectors:
               - container_cpu_utilization
               - container_filesystem_usage
