@@ -69,6 +69,7 @@ spec:
     receivers:
       awscontainerinsightreceiver:
         prefer_full_pod_name: true
+        add_full_pod_name_metric_label: true
       
     processors:
       batch/metrics:
