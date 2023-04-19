@@ -4,6 +4,7 @@ metadata:
   name: prometheus
   namespace: prometheus
 provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
 parameters:
   type: gp2
 reclaimPolicy: Retain
