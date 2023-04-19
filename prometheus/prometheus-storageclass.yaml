@@ -3,7 +3,7 @@ apiVersion: storage.k8s.io/v1
 metadata:
   name: prometheus
   namespace: prometheus
-provisioner: kubernetes.io/aws-ebs
+provisioner: ebs.csi.aws.com
 parameters:
   type: gp2
 reclaimPolicy: Retain
